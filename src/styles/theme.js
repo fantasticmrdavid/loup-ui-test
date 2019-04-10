@@ -15,19 +15,13 @@ const theme = {
   colorPlaceholderContent: '#ccc',
 
   colorBodyBackground: '#f9f9f9',
-  colorLightbox: 'rgba(0, 0, 0, 0.3)',
   colorFont: '#333',
 
-  colorDivider: '#ddd',
-
-  navHeight: '65px',
+  sidebarWidth: '300px',
 
   fontBody: '\'Roboto\', Arial, Helvetica, sans-serif',
 
-  inputBorderColor: '#ccc',
-  inputIconColor: '#ccc',
-  inputTextBgColor: '#f7f7f7',
-  inputTextHoverBgColor: '#eee',
+  borderColor: '#eee',
 
   dropShadow: '0px 2px 5px rgba(0, 0, 0, 0.15)',
 };

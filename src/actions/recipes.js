@@ -12,15 +12,16 @@ export const fetchAllRecipes = () => {
   };
 };
 
-export const searchRecipes = (filters) => {
+export const searchRecipes = () => (dispatch, getState) => {
+  const { filters } = getState();
   const { contents } = recipes;
-  return {
+  return dispatch({
     type: RECIPES_SEARCHED,
     results: contents.filter((r) => {
       const { tags } = r;
       return tags.reduce((a, t) => {
-        return !a ? filters.indexOf(t.id) !== -1 : true;
+        return !a ? filters.active.indexOf(t.id) !== -1 : true;
       }, false);
     }),
-  };
+  });
 };
