@@ -7,6 +7,7 @@ export const Container = styled.div`
   align-items: center;
   background-color: ${theme.colorBodyBackground};
   min-height: 100vh;
+  background-color: ${theme.colorLightGrey};
 `;
 
 export const Content = styled.main`

@@ -4,7 +4,7 @@ const theme = {
   colorRed: 'red',
   colorGreen: 'green',
   colorGrey: '#aaa',
-  colorLightGrey: '#ddd',
+  colorLightGrey: '#fafafa',
   colorCharcoal: '#444',
 
   colorPrimaryLight: '#2981FB',
@@ -29,7 +29,7 @@ const theme = {
   inputTextBgColor: '#f7f7f7',
   inputTextHoverBgColor: '#eee',
 
-  dropShadow: '0 2px 10px rgba(0, 0, 0, 0.2)',
+  dropShadow: '0px 2px 5px rgba(0, 0, 0, 0.15)',
 };
 
 export default theme;
