@@ -4,14 +4,17 @@ import {
   FILTER_REMOVED,
 } from 'Constants';
 import { fetchAllRecipes, searchRecipes } from 'actions/recipes';
-import filters from 'data/filters.json';
+import request from 'helpers/api';
 
-export const fetchAllFilters = () => {
-  const { contents } = filters;
-  return {
-    type: ALL_FILTERS_FETCHED,
-    results: contents,
-  };
+export const fetchAllFilters = () => (dispatch) => {
+  return request('http://localhost:3000/filters')
+    .then((res) => {
+      const { contents } = res;
+      dispatch({
+        type: ALL_FILTERS_FETCHED,
+        results: contents,
+      });
+    });
 };
 
 export const addFilter = id => (dispatch) => {
