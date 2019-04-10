@@ -12,12 +12,14 @@ const FilterSelector = (props) => {
 
   const {
     Container,
+    Icon,
     Name,
   } = styles;
 
   return (
     <Container active={active} onClick={() => (active ? remove() : add())}>
       <Name>{name}</Name>
+      { active && <Icon><img src="/assets/tickIcon.svg" alt="tick" /></Icon>}
     </Container>
   );
 };

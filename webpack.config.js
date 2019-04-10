@@ -4,6 +4,7 @@ const path = require('path');
 const BUILD_DIR = path.resolve(__dirname, 'public');
 const APP_DIR = path.resolve(__dirname, 'src');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: `${APP_DIR}/index.html`,
@@ -44,5 +45,8 @@ module.exports = {
   },
   plugins: [
     HtmlWebpackPluginConfig,
+    new CopyWebpackPlugin([
+      { from: `${APP_DIR}/assets/`, to: 'assets/' }
+    ]),
   ],
 };

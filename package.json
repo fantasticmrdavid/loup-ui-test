@@ -21,6 +21,7 @@
     "babel-jest": "24.7.1",
     "babel-plugin-ramda": "1.6.2",
     "connected-react-router": "6.3.0",
+    "copy-webpack-plugin": "4.6.0",
     "history": "4.7.2",
     "html-webpack-plugin": "3.2.0",
     "jest": "24.7.1",

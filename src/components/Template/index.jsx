@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import GlobalStyles from 'styles/global';
 import * as styles from './styles';
 
 const Template = ({ children }) => {
@@ -9,6 +10,7 @@ const Template = ({ children }) => {
   } = styles;
   return (
     <Container>
+      <GlobalStyles />
       <Content>
         {children}
       </Content>

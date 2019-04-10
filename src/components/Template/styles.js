@@ -13,6 +13,6 @@ export const Container = styled.div`
 export const Content = styled.main`
   margin-top: ${theme.navHeight};
   width: 100%;
-  max-width: 900px;
-  padding-bottom: 3em;
+  max-width: 960px;
+  padding: 3em 0;
 `;

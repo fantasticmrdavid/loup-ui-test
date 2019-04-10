@@ -3,7 +3,7 @@ const theme = {
   colorWhite: '#fff',
   colorRed: 'red',
   colorGreen: 'green',
-  colorGrey: '#aaa',
+  colorGrey: '#bbb',
   colorLightGrey: '#fafafa',
   colorCharcoal: '#444',
 
@@ -19,7 +19,7 @@ const theme = {
 
   sidebarWidth: '300px',
 
-  fontBody: '\'Roboto\', Arial, Helvetica, sans-serif',
+  fontBody: '\'Nanum Gothic\', Arial, Helvetica, sans-serif',
 
   borderColor: '#eee',
 
