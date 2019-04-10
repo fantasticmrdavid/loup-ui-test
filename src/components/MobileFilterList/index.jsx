@@ -25,7 +25,7 @@ class MobileFilterList extends Component {
   }
 
   render() {
-    const { listing } = this.props;
+    const { activeCount, listing } = this.props;
     const { active } = this.state;
     const {
       Container,
@@ -34,7 +34,9 @@ class MobileFilterList extends Component {
     } = styles;
     return (
       <Container>
-        <Heading onClick={e => this.toggleActive(e)}>I selected</Heading>
+        <Heading onClick={e => this.toggleActive(e)}>
+          {activeCount > 0 ? `${activeCount} selected` : 'Filter selection'}
+        </Heading>
         <Collapsible active={active}>
           <List>
             { listing.map(f => <FilterSelectorContainer key={`filter_${f.id}`} {...f} />) }
@@ -46,6 +48,7 @@ class MobileFilterList extends Component {
 }
 
 MobileFilterList.propTypes = {
+  activeCount: PropTypes.number.isRequired,
   shouldFetchAll: PropTypes.bool,
   fetchAllFilters: PropTypes.func.isRequired,
   listing: PropTypes.array.isRequired,

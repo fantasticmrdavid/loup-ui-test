@@ -12,7 +12,7 @@ class FilterList extends Component {
   }
 
   render() {
-    const { listing } = this.props;
+    const { activeCount, listing } = this.props;
     const {
       Container,
       Heading,
@@ -20,7 +20,7 @@ class FilterList extends Component {
     } = styles;
     return (
       <Container>
-        <Heading>I selected</Heading>
+        <Heading>{activeCount > 0 ? `${activeCount} selected` : 'Filter selection'}</Heading>
         <List>
           { listing.map(f => <FilterSelectorContainer key={`filter_${f.id}`} {...f} />) }
         </List>
@@ -30,6 +30,7 @@ class FilterList extends Component {
 }
 
 FilterList.propTypes = {
+  activeCount: PropTypes.number.isRequired,
   shouldFetchAll: PropTypes.bool,
   fetchAllFilters: PropTypes.func.isRequired,
   listing: PropTypes.array.isRequired,

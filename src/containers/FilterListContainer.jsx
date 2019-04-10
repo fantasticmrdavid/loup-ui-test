@@ -10,6 +10,7 @@ const FilterListContainer = (props) => {
 const mapStateToProps = (state) => {
   const { filters } = state;
   return {
+    activeCount: filters.active.length,
     listing: filters.listing,
     shouldFetchAll: filters.listing.length === 0,
   };

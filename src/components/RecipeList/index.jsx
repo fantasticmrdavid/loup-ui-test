@@ -12,13 +12,17 @@ class RecipeList extends Component {
   }
 
   render() {
-    const { listing } = this.props;
+    const { listing, shouldFetchAll } = this.props;
     const {
       Container,
       List,
+      Message,
     } = styles;
     return (
       <Container>
+        {
+          listing.length === 0 && !shouldFetchAll && <Message>No recipes found with selected filters :(</Message>
+        }
         <List>
           { listing.map(r => <RecipeCard key={`recipe_${r.contentId}`} {...r} />) }
         </List>

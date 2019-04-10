@@ -18,3 +18,8 @@ export const List = styled.div`
     grid-column-gap: 20px;
   `}
 `;
+
+export const Message = styled.div`
+  text-align: center;
+  font-weight: 500;
+`;
