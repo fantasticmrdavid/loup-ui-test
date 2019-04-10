@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { fadeIn } from 'styles/animations';
 import theme from 'styles/theme';
+import { media } from 'styles/utils';
 
 export const Container = styled.div`
   display: flex;
@@ -21,6 +22,14 @@ export const Image = styled.div`
   background-image: ${props => `url(${props.src})`};
   background-position: center center;
   background-size: cover;
+  transition: 0.3s;
+
+  ${media.desktop`
+    background-size: 100% 100%;
+    &:hover {
+      background-size: 110% 110%;
+    }
+  `};
 `;
 
 export const Title = styled.div`

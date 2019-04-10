@@ -3,7 +3,7 @@ import theme from 'styles/theme';
 import { media } from 'styles/utils';
 
 export const Container = styled.div`
-  ${media.tablet`
+  ${media.desktop`
     display: grid;
     width: 100%;
     grid-template-columns: auto ${theme.sidebarWidth};
@@ -13,8 +13,16 @@ export const Container = styled.div`
 `;
 
 export const FilterBar = styled.aside`
+  display: none;
   width: 100%;
-  ${media.tablet`
+  ${media.desktop`
+    display: block;
     width: ${theme.sidebarWidth};
+  `}
+`;
+
+export const MobileFilterBar = styled.div`
+  ${media.desktop`
+    display: none;
   `}
 `;

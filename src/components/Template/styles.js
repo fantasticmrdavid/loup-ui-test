@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import theme from 'styles/theme';
+import { media } from 'styles/utils';
 
 export const Container = styled.div`
   display: flex;
@@ -11,8 +12,10 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.main`
-  margin-top: ${theme.navHeight};
   width: 100%;
-  max-width: 960px;
-  padding: 3em 0;
+
+  ${media.desktop`
+    padding: 3em 0;
+    max-width: 960px;
+  `}
 `;
