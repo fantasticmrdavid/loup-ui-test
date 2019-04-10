@@ -1,2 +1,2 @@
 #! /bin/sh
-npm run lint
+NODE_ENV=test && npm run lint && npm run jest;

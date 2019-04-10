@@ -4,12 +4,15 @@ import {
 
 import recipes from 'data/recipes.json';
 
-export const searchRecipes = filters => (dispatch) => {
-  return dispatch({
+export const searchRecipes = filters => {
+  const { contents } = recipes;
+  return {
     type: RECIPES_SEARCHED,
-    results: recipes.filter((r) => {
+    results: contents.filter((r) => {
       const { tags } = r;
-      return tags.reduce((a, t) => (!!a ? filters.indexOf(t) !== -1 : false), true);
+      return tags.reduce((a, t) => {
+        return !a ? filters.indexOf(t.id) !== -1 : true;
+      }, false);
     }),
-  });
+  };
 };

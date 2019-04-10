@@ -12,5 +12,6 @@
 - React-Router
 - WebPack
 - esLint
+- Jest
 
 ## Assumptions & Dev Notes
