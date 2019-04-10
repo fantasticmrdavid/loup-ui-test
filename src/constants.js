@@ -1,1 +1,2 @@
 export const RESET_APP = 'RESET_APP';
+export const RECIPES_SEARCHED = 'RECIPES_SEARCHED';
